@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+    margin: 10px;
+}
+
+.menu-link a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #2980b9;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+}
+#register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#register h1 {
+    margin-bottom: 20px;
+}
+
+#register input[type="text"],
+#register input[type="password"],
+#register button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+#register button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+#register button:hover {
+    background-color: #2980b9;
+}
+#student-information {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#student-information img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.student-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.student-details p {
+    margin: 5px 0;
+}
+
+#timetable-section {
+    background-color: gray;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#timetable-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#timetable-section th,
+#timetable-section td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#monthly-activities {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+#monthly-activities h2 {
+    margin-bottom: 10px;
+}
+
+#monthly-activities div {
+    margin-bottom: 20px;
+}
+
+#monthly-activities label {
+    font-weight: bold;
+}
+
+#monthly-activities select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#subject-wise-activities {
+    list-style-type: none;
+    padding: 0;
+}
+
+#subject-wise-activities li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5px;
+        flex-direction: row;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-link a {
+        padding: 5px;
+    }
+
+    #timetable-section th,
+    #timetable-section td {
+        font-size: 14px;
+    }
+    #register input[type="text"],
+    #register input[type="password"],
+    #register button {
+        width: 200px;
+    }
+    #student-information img {
+        max-width: 150px;
+    }
+    #timetable-section th,
+    #timetable-section td {
+        padding: 5px;
+        font-size: 12px;
+    }
+    #monthly-activities select {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-link a {
+        padding: 5px;
+    }
+
+    #timetable-section th,
+    #timetable-section td {
+        font-size: 12px;
+    }
+    #register input[type="text"],
+    #register input[type="password"],
+    #register button {
+        width: 150px;
+    }
+    #student-information img {
+        max-width: 100px;
+    }
+    #timetable-section th,
+    #timetable-section td {
+        padding: 3px;
+        font-size: 10px;
+    }
+    #monthly-activities select {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img class="logo-image" src="./logo-school.jpg" alt="" />
+            </div>
+            <ul class="menu-links">
+                <li class="menu-link"><a href="#">Home</a></li>
+                <li class="menu-link">
+                    <a href="#" id="monthly-activities-link"
+                        >Monthly Activities</a
+                    >
+                </li>
+                <li class="menu-link">
+                    <a href="#" id="student-profile">Student Profile</a>
+                </li>
+                <li class="menu-link">
+                    <a href="#" id="time-table-section">Timetable</a>
+                </li>
+                <li class="menu-link"><a href="#">Contact Us</a></li>
+            </ul>
+        </header>
+        <main>
+            <section id="register">
+                <h1>Login</h1>
+                <input type="text" id="username" placeholder="Username" />
+                <input type="password" id="password" placeholder="Password" />
+                <button id="login-button">Login</button>
+            </section>
+            <section id="home" style="display: none">Welcome Student</section>
+            <section id="monthly-activities" style="display: none">
+                <h2>Monthly Activities</h2>
+                <div>
+                    <label for="monthly-activities-dropdown"
+                        >Select Subject:</label
+                    >
+                    <select
+                        id="monthly-activities-dropdown"
+                        onchange="showMonthlyActivities()"></select>
+                </div>
+                <ul id="subject-wise-activities"></ul>
+            </section>
+
+            <section id="timetable-section">
+                <h2>Timetable</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>9:30 - 10:30</th>
+                            <th>10:30 - 11:30</th>
+                            <th>11:30 - 11:45</th>
+                            <th>11:45 - 12:45</th>
+                            <th>12:45 - 1:30</th>
+                            <th>1:30 - 2:30</th>
+                            <th>2:30 - 3:30</th>
+                            <th>3:30 - 3:45</th>
+                            <th>3:45 - 4:45</th>
+                            <th>4:45 - 5:00</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+
+                            <td>Class 1</td>
+                            <td>Class 2</td>
+                            <td>Recess</td>
+                            <td>Class 3</td>
+                            <td>Lunch</td>
+                            <td>Class 4</td>
+                            <td>Class 5</td>
+                            <td>Recess</td>
+                            <td>Class 6</td>
+                            <td>Class 7</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+
+                            <td>Class 1</td>
+                            <td>Class 2</td>
+                            <td>Recess</td>
+                            <td>Class 3</td>
+                            <td>Lunch</td>
+                            <td>Class 4</td>
+                            <td>Class 5</td>
+                            <td>Recess</td>
+                            <td>Class 6</td>
+                            <td>Class 7</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+
+                            <td>Class 1</td>
+                            <td>Class 2</td>
+                            <td>Recess</td>
+                            <td>Class 3</td>
+                            <td>Lunch</td>
+                            <td>Class 4</td>
+                            <td>Class 5</td>
+                            <td>Recess</td>
+                            <td>Class 6</td>
+                            <td>Class 7</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+
+                            <td>Class 1</td>
+                            <td>Class 2</td>
+                            <td>Recess</td>
+                            <td>Class 3</td>
+                            <td>Lunch</td>
+                            <td>Class 4</td>
+                            <td>Class 5</td>
+                            <td>Recess</td>
+                            <td>Class 6</td>
+                            <td>Class 7</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+
+                            <td>Class 1</td>
+                            <td>Class 2</td>
+                            <td>Recess</td>
+                            <td>Class 3</td>
+                            <td>Lunch</td>
+                            <td>Class 4</td>
+                            <td>Class 5</td>
+                            <td>Recess</td>
+                            <td>Class 6</td>
+                            <td>Class 7</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+
+                            <td>Class 1</td>
+                            <td>Class 2</td>
+                            <td>Recess</td>
+                            <td>Class 3</td>
+                            <td>Lunch</td>
+                            <td>Class 4</td>
+                            <td>Class 5</td>
+                            <td>Recess</td>
+                            <td>Class 6</td>
+                            <td>Class 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="student-information" style="display: none">
+                <img
+                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQUDBAYCB//EADoQAAICAQEGAwUFBQkAAAAAAAABAgMRBAUSITEycUFRYRNSgZGxFCIjksEGFTNyoTRCQ1NigqLR8P/EABcBAQEBAQAAAAAAAAAAAAAAAAACAQP/xAAZEQEBAQEBAQAAAAAAAAAAAAAAARECMRL/2gAMAwEAAhEDEQA/APpEup9yCZdT7kHZAAAAAADj5GzpNFZqXlfdh4yZc6bR00L7kMv3nxZl6kbis0NNsnu26feqf95rDXqmbe0NF7WrerWbY/8AIsMA52txzFlc6/4kJR7o8HUThGaalFSXkyt1Wy4vMtP91+74MudMsVIJlFwk4yTTXNMgpgAAAAAyVdL7kkVdL7kgY5dT7kEy6n3IAAAAbOg0z1VuOVa4yZrHQ6ChU6aMcYk1mXcnq5GxnhFRilFJJckegDmoAAAAAaW0dGr4b0F+JHl6+hRHVFDtSlVanMViM1n4+JfFTY0wAWwAAGSrpfckirpfckDHLqfcgmXU+5AAAAZdLD2mprg+TksnSIodlrOtr+P0L859+qgACWgAAAAAV22YZ0yn4xl/Rliau01nRWfD6mz1lc+AuQOqQAAZKul9ySKul9yQMcup9yCZdT7kAAABu7HWdb2i3/75l6U+xI/i2z8opFwc+vVQABLQAAAAANfXre0Vy/0tmweLo79U4+9FoDmAMY4MHZAAAMlXS+5JFXS+5IGOXU+5BMup9yAABKTbwubAuNiwxp5T96X0LExaWr2NFcPJce5lOV9WAAwAAAAAAMBgc1qYez1FkPKTMRYbYq3b42JcJrD7ledp4igAAyVdL7kkVdL7kgY5dT7kEy6n3IAFjszRylYrrYtRjximubK49RsnHpnNdpMWaOoIbS5vBza1N/8AnWfmPMrbJ9c5NerZHw3XRwurnNxhOMmuaTzgyHM0XSotVkHxXh5o6DS3w1FSsg+HJryZlmNlZgAS0HhzmS1qU1R9Gi1RWenwQfJIZWgYQPH8ksfqdd9Wuq6tR1TprszHc3pm1zKiq0ijLiRttT0px/efZ+l17RXHvGc32eZhxGx4yvU5ofuVnhjqTOs9nIe6Nft1HTIw7XjNBc/FPjB7aDJwnmcy0bcsjt56Gi31vL8U/3nr3psuP7JqkXbZLVby3HK7q3Lx2XyQ7CZxdxq3Nm2ul5Kq+aCYYllVgAeS2fFnwytFe6T0pqJ3F5Zw6T67nUnZIyhs4ct8NirNCMjNxcr6ZlzcHlJJkqeZOJX1xLzPHTiWi9QsRR7TUnN24fZ3b0nUVySfSYpU5NRTSr0jjM08e0uDVaek1Rs7Q2g6TpSlFKUqRsAAAAAAB//Z"
+                    alt="" />
+                <div class="student-details">
+                    <p>name: kazol</p>
+                    <p>roll number: 4321</p>
+                    <p>class: 10th class</p>
+                    <p>section: A</p>
+                </div>
+            </section>
+            <section id="about-us" style="display: none"></section>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
